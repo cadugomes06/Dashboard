@@ -2123,19 +2123,18 @@ export const employeesData = [
 
 export const ordersData = [
   {
-    OrderID: 10248,
+    OrderID: 845954,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
-      product6,
+    product4,
   },
   {
-    OrderID: 345653,
+    OrderID: 845954,
     CustomerName: 'Carson Darrin',
     TotalAmount: 56.34,
     OrderItems: 'Butter Scotch',
@@ -2143,10 +2142,10 @@ export const ordersData = [
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
-      product5,
+    product4,
   },
   {
-    OrderID: 390457,
+    OrderID:  748975,
     CustomerName: 'Fran Perez',
     TotalAmount: 93.31,
     OrderItems: 'Candy Gucci',
@@ -2154,10 +2153,10 @@ export const ordersData = [
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
-      product7,
+      product1,
   },
   {
-    OrderID: 893486,
+    OrderID:  748975,
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
     OrderItems: 'Night Lamp',
@@ -2165,7 +2164,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      product4,
+    product1,
   },
   {
     OrderID: 748975,

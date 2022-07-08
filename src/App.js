@@ -46,7 +46,7 @@ const App = () => {
                dark:bg-main-dark-bg navbar w-full'>
                   <Navbar />
               </div>
-            </div>
+          
 
             <div>
               <Routes>
@@ -78,7 +78,7 @@ const App = () => {
 
               </Routes>
             </div>
-
+            </div>
          </div>
       </BrowserRouter>
     </div>

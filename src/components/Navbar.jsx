@@ -14,7 +14,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor}) => (
     <TooltipComponent content={title} position='BottomCenter'>
       <button type='button' onClick={customFunc}
       style={{ color }} 
-      className="relative text-x1 rounded-full p3 
+      className="relative text-x1 rounded-full pt-4
       hover:bg-light-gray"
       >
         <span style={{ background: dotColor }}
