@@ -28,19 +28,6 @@ const ColorPicker = () => {
                   change={change}
                />
           </div>
-          <div>
-            <p className="text-2x1 font-semibold mt-2 mb-4">
-              cores</p>
-              <ColorPickerComponent 
-                  id="inline-pallete"
-                  mode="Picker"
-                  modeSwitcher={false}
-                  inline
-                  showButtons={false}
-                  change={change}
-               />
-          </div>
-
         </div>
 
       </div>
