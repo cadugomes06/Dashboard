@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdOutlineCancel, MdOutLineCancel } from 'react-icons/md'
+import { MdOutlineCancel } from 'react-icons/md'
 import { BsCheck } from 'react-icons/bs'
 import { TooltipComponent  } from '@syncfusion/ej2-react-popups'
 import { themeColors } from '../data/dummy'
@@ -7,6 +7,9 @@ import { themeColors } from '../data/dummy'
 import { useStateContext } from '../contexts/ContextProvider'
 
 const ThemeSettins = () => {
+  const { setColor, setMode, currentColor, currentMode, setThemeSettings } = useStateContext();
+  
+
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 
     right-0">
@@ -17,7 +20,7 @@ const ThemeSettins = () => {
           <p className='font-semibold text-xl'>Configurações</p>
           <button
             type='button'
-            onClick={() => {}}
+            onClick={() => setThemeSettings(false)}
             style={{ color: 'rgb(153, 171, 180)', borderRadius: '50%'}}
             className="text-2x1 p-3 hover:drop-shadow-x1
              hover:bg-light-gray"
@@ -36,8 +39,8 @@ const ThemeSettins = () => {
                name='theme'
                value='Light'
                className="cursor-pointer"
-               onChange={() => {}}
-               chacked={true}
+               onChange={setMode}
+               chacked={currentMode === 'Light'}
                 />
                 <label htmlFor='light' className='ml-2 text-md cursos-pointer'>
                     Light
@@ -50,8 +53,8 @@ const ThemeSettins = () => {
                name='theme'
                value='Dark'
                className="cursor-pointer"
-               onChange={() => {}}
-               chacked={true}
+               onChange={setMode}
+               chacked={currentMode === 'Dark'}
                 />
                 <label htmlFor='dark' className='ml-2 text-md cursos-pointer'>
                     Dark
@@ -69,8 +72,16 @@ const ThemeSettins = () => {
                    position="topCenter">
                     <div className='relative mt-2 cursor-pointer flex 
                     gap-5 items-center'>
-                      <button>
-                       <BsCheck />
+                      <button 
+                        type='button'
+                        className='h-10 w-10
+                        rounded-full 
+                        cursor-pointer'
+                        style={{ backgroundColor: item.color}}
+                        onClick={() => setColor(item.color)}
+                      >
+                       <BsCheck className={`ml-2 text-2x1 text-white 
+                       ${item.color === currentColor ? 'block' : 'hidden'}`} />
                       </button>
                     </div>
 
