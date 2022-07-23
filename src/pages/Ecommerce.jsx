@@ -3,10 +3,10 @@ import { BsCurrencyDollar } from 'react-icons/bs'
 import { GoPrimitiveDot } from 'react-icons/go'
 import { Stacked, Pie, Button, SparkLine} from '../components'
 import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy' 
-import { userStateContext } from '../contexts/ContextProvider'
+import { useStateContext } from '../contexts/ContextProvider'
 
 const Ecommerce = () => {
-  const { currentColor } = userStateContext()
+  const { currentColor } = useStateContext()
 
   return (
     <div className='mt-12'>

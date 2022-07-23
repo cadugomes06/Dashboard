@@ -1,8 +1,8 @@
 import React from 'react'
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-LineSeries, DateTime, legend, Tooltip} from '@syncfusion/ej2-react-charts'
+LineSeries, DateTime, Legend, Tooltip} from '@syncfusion/ej2-react-charts'
 
-import { lineCustomSeries, LinePrimaryYAxis, LineprimaryXAxis} from '../../data/dummy'
+import { lineCustomSeries, LinePrimaryYAxis, LinePrimaryXAxis} from '../../data/dummy'
 import { useStateContext } from '../../contexts/ContextProvider'
 
 const LineChart = () => {
@@ -12,13 +12,13 @@ const LineChart = () => {
     <ChartComponent 
         id="line-chat"
         height="420px"
-        primaryXAxis={LineprimaryXAxis}
+        primaryXAxis={LinePrimaryXAxis}
         primaryYAxis={LinePrimaryYAxis}
         chartArea={{ border: {width: 0 }}}
         Tooltip={{ enable: true }}
         background={currentMode === 'Dark' ? '#33373E' : "#fff"}
      >
-      <Inject services={[LineSeries, DateTime, legend, Tooltip]}  />
+      <Inject services={[LineSeries, DateTime, Legend, Tooltip]}  />
       <SeriesCollectionDirective>
         {lineCustomSeries.map((item, index) => 
         <SeriesDirective key={index} {...item} />

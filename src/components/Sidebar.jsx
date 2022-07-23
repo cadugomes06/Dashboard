@@ -56,12 +56,11 @@ const Sidebar = () => {
                       key={link.name}
                       onClick={handleCloseSidebar}
                       style={({ isActive}) =>  ({
-                        background: isActive ?
-                        currentColor: ''
-                      })
-                      className={({ isActive }) => 
-                        isActive ? activeLink : normalLink }  
-                      >
+                        backgroundColor: isActive ? currentColor: '',
+                      })}
+                      className={ ({isActive}) => 
+                        isActive ? activeLink : normalLink
+                       }>
                         {link.icon}
                         <span className='capitalize'>
                             {link.name}
