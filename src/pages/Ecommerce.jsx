@@ -43,7 +43,7 @@ const Ecommerce = () => {
                 <button type='button' className='text-2x1 opacitity-0.9 
                 rounded-full p-4 hover:drop-shadow-x1'
                  style={{ color: item.iconColor,
-                   backgroundColor: item.iconBg}}>
+                   backgroundColor: item.iconBg }} >
                     {item.icon}
                 </button>
                 <p className='mt-3'>
@@ -61,7 +61,7 @@ const Ecommerce = () => {
           ))}
           </div>
 
-          <div className='flex gap-10 flex-wrap justify-content'>
+          <div className='flex gap-10 flex-wrap justify-center'>
             <div className='bg-white dark:text-gray-200 
             dark:bg-secondary-dark- m-3 p-4 rounded-2x1 md:w-780'>
               <div className='flex justify-between'>
